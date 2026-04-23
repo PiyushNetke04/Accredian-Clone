@@ -1,36 +1,154 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Accredian Enterprise Clone
 
-## Getting Started
+A responsive frontend clone of the Accredian Enterprise website built using Next.js, Tailwind CSS, functional components, hooks, and mock API integration.
 
-First, run the development server:
+## Live Demo
+https://accredian-clone-gff50yyis-piyushnetke04s-projects.vercel.app 
+
+## GitHub Repository
+https://github.com/PiyushNetke04/Accredian-Clone
+
+---
+
+## Tech Stack
+
+- Next.js
+- React
+- Tailwind CSS
+- Functional Components
+- React Hooks (`useState`, `useEffect`)
+- JSON Server (Mock API)
+- Vercel (Deployment)
+
+---
+
+## Features Implemented
+
+- Responsive Navbar with smooth scrolling
+- Hero Section
+- Stats Section
+- Clients Section
+- Accredian Edge Section
+- Course Segmentation
+- CAT Framework Section
+- How It Works Section
+- FAQ Accordion
+- Testimonials Slider
+- Contact Banner
+- Footer
+- Lead Capture Form
+- Mock API Integration using JSON Server
+
+---
+
+# Setup Instructions
+
+## Clone repository
+
+```bash
+git clone https://github.com/PiyushNetke04/Accredian-Clone
+```
+
+## Move into project folder
+
+```bash
+cd accredian-clone-js
+```
+
+## Install dependencies
+
+```bash
+npm install
+```
+
+## Run frontend
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Frontend runs on:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```bash
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## Run mock API server
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npx json-server --watch db.json --port 5000
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Mock API runs on:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+http://localhost:5000
+```
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+# Approach Taken
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+I approached this assignment by first breaking the original website into sections/components such as:
+
+- Navbar
+- Hero
+- Stats
+- Clients
+- FAQ
+- Testimonials
+- Footer etc.
+
+I initially focused on replicating the UI structure and layout accurately using Next.js and Tailwind CSS.
+
+After completing the UI clone, I improved interactivity by adding:
+
+- smooth scrolling navigation
+- FAQ dropdown functionality
+- testimonial slider functionality
+
+Finally, I implemented mock API integration using JSON Server and created a lead capture form that stores submitted user data.
+
+---
+
+# AI Usage Explanation
+
+AI was primarily used for:
+
+- Debugging errors
+- Tailwind styling suggestions
+- Improving UI alignment
+- Fixing component structure issues
+- Guidance for mock API integration
+- Lead form integration troubleshooting
+
+AI helped speed up development, but all components were manually integrated, tested, styled, and adjusted based on the original design.
+
+---
+
+# What I Modified Manually
+
+I manually:
+
+- Built all components
+- Adjusted layouts to closely match the original website
+- Fixed responsiveness issues
+- Customized styling after comparing with the original site
+- Debugged multiple runtime issues
+- Integrated all sections together
+- Tested form submission functionality
+- Made UI improvements after reviewing visual mismatches
+
+---
+
+# Improvements I Would Make With More Time
+
+- Convert mock API to production backend/API routes
+- Improve mobile responsiveness further
+- Add better animations using Framer Motion
+- Improve accessibility
+- Optimize performance and image loading
+- Make testimonial section more dynamic
+- Add backend database integration
