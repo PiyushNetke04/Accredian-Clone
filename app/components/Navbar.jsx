@@ -110,7 +110,7 @@ export default function Navbar() {
 
         {/* Phone Menu Hamburger */}
         <button
-          className="lg:hidden"
+          className="lg:hidden text-gray-700"
           onClick={() => setMenuOpen(!menuOpen)}
         >
           {menuOpen ? (
