@@ -1,0 +1,52 @@
+{
+  "leads": [
+    {
+      "name": "fpokpod",
+      "email": "admin@gmail.com",
+      "company": "oepfkpowe",
+      "id": 1
+    }
+  ],
+  "faqs": [
+    {
+      "id": 1,
+      "category": "About the Course",
+      "question": "What types of corporate training programs does Accredian offer?",
+      "answer": "Accredian provides industry-specific customizable training programs."
+    },
+    {
+      "id": 2,
+      "category": "About the Course",
+      "question": "What domain specializations are available?",
+      "answer": "Leadership, Tech, Data, Fintech, AI and more."
+    },
+    {
+      "id": 3,
+      "category": "About the Delivery",
+      "question": "Who are the instructors?",
+      "answer": "Industry experts and mentors."
+    }
+  ],
+  "testimonials": [
+    {
+      "id": 1,
+      "logo": "/company1.svg",
+      "text": "We would like to thank Accredian for their wonderful support."
+    },
+    {
+      "id": 2,
+      "logo": "/company2.svg",
+      "text": "Accredian commitment to excellence is unmatched."
+    }
+  ],
+  "clients": [
+    {
+      "id": 1,
+      "logo": "/reliance.png"
+    },
+    {
+      "id": 2,
+      "logo": "/hcl.png"
+    }
+  ]
+}
