@@ -38,23 +38,22 @@ export default function Hero() {
             </p>
 
             {/* Features */}
-            <div
-              className="grid grid-cols-1 sm:grid-cols-2 
-              gap-4 mt-6 md:mt-10 
-              text-sm sm:text-base md:text-lg text-gray-900"
-            >
-              <div className="flex items-center gap-2 justify-center md:justify-start">
-                ✅ <span>Tailored Solutions</span>
-              </div>
+            
+            <div className="flex flex-col md:flex-row md:flex-wrap gap-4 md:gap-6 mt-6 md:mt-10 
+                text-sm sm:text-base md:text-lg text-gray-900"
+>
+                <div className="flex items-center gap-2 justify-center md:justify-start">
+                    ✅ <span>Tailored Solutions</span>
+                </div>
 
-              <div className="flex items-center gap-2 justify-center md:justify-start">
-                ✅ <span>Industry Insights</span>
-              </div>
-
-              <div className="flex items-center gap-2 justify-center md:justify-start">
-                ✅ <span>Expert Guidance</span>
-              </div>
+                <div className="flex items-center gap-2 justify-center md:justify-start">
+                    ✅ <span>Industry Insights</span>
             </div>
+
+  <div className="flex items-center gap-2 justify-center md:justify-start">
+    ✅ <span>Expert Guidance</span>
+  </div>
+          </div>
 
             {/* Button */}
             <button
