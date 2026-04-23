@@ -3,7 +3,7 @@
 A responsive frontend clone of the Accredian Enterprise website built using Next.js, Tailwind CSS, functional components, hooks, and mock API integration.
 
 ## Live Demo
-https://accredian-clone-gff50yyis-piyushnetke04s-projects.vercel.app 
+https://accredian-clone-65xs92bkp-piyushnetke04s-projects.vercel.app 
 
 ## GitHub Repository
 https://github.com/PiyushNetke04/Accredian-Clone
