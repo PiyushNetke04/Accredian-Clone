@@ -39,12 +39,14 @@ export default function FAQ() {
 
     misc: [
       {
-        question: "What is the ideal team size for corporate training?",
+        question:
+          "What is the ideal team size for corporate training?",
         answer:
           "We can accommodate both small teams and large enterprise groups depending on your requirements.",
       },
       {
-        question: "How do we get started with Accredian?",
+        question:
+          "How do we get started with Accredian?",
         answer:
           "Simply click Enquire Now and our team will reach out to understand your training needs.",
       },
@@ -61,11 +63,13 @@ export default function FAQ() {
   };
 
   return (
-    <section className="bg-[#f8f8f8] py-16 px-6" id="faq">
-      
+    <section
+      className="bg-[#f8f8f8] py-16 md:py-20 px-4 sm:px-6"
+      id="faq"
+    >
       {/* Heading */}
-      <div className="max-w-6xl mx-auto mb-10">
-        <h2 className="text-3xl md:text-5xl font-bold text-black">
+      <div className="max-w-6xl mx-auto mb-10 md:mb-12 text-center md:text-left">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black">
           Frequently Asked{" "}
           <span className="text-blue-600">
             Questions
@@ -74,14 +78,31 @@ export default function FAQ() {
       </div>
 
       {/* Main Layout */}
-      <div className="max-w-6xl mx-auto grid md:grid-cols-[220px_1fr] gap-16">
-        
+      <div
+        className="
+          max-w-6xl
+          mx-auto
+          grid
+          grid-cols-1
+          md:grid-cols-[220px_1fr]
+          gap-8 md:gap-16
+        "
+      >
         {/* Left Buttons */}
-        <div className="flex flex-col gap-5">
+        <div className="flex flex-col gap-4 md:gap-5">
           {[
-            { id: "course", label: "About the Course" },
-            { id: "delivery", label: "About the Delivery" },
-            { id: "misc", label: "Miscellaneous" },
+            {
+              id: "course",
+              label: "About the Course",
+            },
+            {
+              id: "delivery",
+              label: "About the Delivery",
+            },
+            {
+              id: "misc",
+              label: "Miscellaneous",
+            },
           ].map((tab) => (
             <button
               key={tab.id}
@@ -89,7 +110,7 @@ export default function FAQ() {
                 setActiveTab(tab.id);
                 setOpenIndex(null);
               }}
-              className={`h-[64px] rounded-xl border text-lg font-semibold transition-all ${
+              className={`w-full h-[55px] md:h-[64px] rounded-xl border text-sm sm:text-base md:text-lg font-semibold transition-all ${
                 activeTab === tab.id
                   ? "bg-white shadow-md text-blue-600 border-gray-200"
                   : "text-gray-500 border-gray-300 bg-transparent"
@@ -102,22 +123,21 @@ export default function FAQ() {
 
         {/* FAQ Right Side */}
         <div className="flex flex-col">
-          
-          {/* Questions */}
           <div className="space-y-4">
             {currentFaqs.map((faq, index) => (
               <div
                 key={index}
                 className="border-b border-gray-200 pb-5"
               >
-                
                 {/* Question */}
                 <div
-                  onClick={() => handleAccordion(index)}
-                  className="flex justify-between items-center cursor-pointer"
+                  onClick={() =>
+                    handleAccordion(index)
+                  }
+                  className="flex justify-between items-center cursor-pointer gap-4"
                 >
                   <h3
-                    className={`text-[18px] font-semibold transition ${
+                    className={`text-base sm:text-lg font-semibold transition ${
                       openIndex === index
                         ? "text-blue-600"
                         : "text-black"
@@ -126,12 +146,14 @@ export default function FAQ() {
                     {faq.question}
                   </h3>
 
-                  <span className="text-lg text-gray-500">
-                    {openIndex === index ? "⌃" : "⌄"}
+                  <span className="text-lg text-gray-500 flex-shrink-0">
+                    {openIndex === index
+                      ? "⌃"
+                      : "⌄"}
                   </span>
                 </div>
 
-                {/* Smooth Answer Dropdown */}
+                {/* Answer */}
                 <div
                   className={`grid transition-all duration-500 ease-in-out ${
                     openIndex === index
@@ -140,23 +162,35 @@ export default function FAQ() {
                   }`}
                 >
                   <div className="overflow-hidden">
-                    <p className="text-gray-600 text-base leading-relaxed max-w-3xl">
+                    <p className="text-gray-600 text-sm sm:text-base leading-relaxed max-w-3xl">
                       {faq.answer}
                     </p>
                   </div>
                 </div>
-
               </div>
             ))}
           </div>
 
-          {/* Enquire Button */}
-          <div className="mt-8 flex justify-center">
-            <button className="bg-blue-600 text-white px-8 py-3 rounded-xl text-base font-semibold shadow-md hover:bg-blue-700 transition">
+          {/* Button */}
+          <div className="mt-8 flex justify-center md:justify-start">
+            <button
+              className="
+                bg-blue-600
+                text-white
+                px-8
+                py-3
+                rounded-xl
+                text-base
+                font-semibold
+                shadow-md
+                hover:bg-blue-700
+                transition
+                w-full sm:w-auto
+              "
+            >
               Enquire Now
             </button>
           </div>
-
         </div>
       </div>
     </section>

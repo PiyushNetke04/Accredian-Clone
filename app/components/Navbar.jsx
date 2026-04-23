@@ -2,16 +2,18 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import { Menu, X } from "lucide-react";
 
 export default function Navbar() {
   const [active, setActive] = useState("home");
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const navItems = [
-    { name: "Home", id: "Home" },
+    { name: "Home", id: "home" },
     { name: "Stats", id: "stats" },
     { name: "Clients", id: "clients" },
     { name: "Accredian Edge", id: "edge" },
-    { name: "CAT", id: "cat" },
+    { name: "CAT", id: "catframework" },
     { name: "How It Works", id: "works" },
     { name: "FAQs", id: "faq" },
     { name: "Testimonials", id: "terminals" },
@@ -32,6 +34,7 @@ export default function Navbar() {
       });
 
       setActive(id);
+      setMenuOpen(false);
     }
   };
 
@@ -66,28 +69,31 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm ">
-      <div className="max-w-[1400px] mx-auto h-[80px] px-8 flex items-center justify-between">
+    <nav className="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm">
+      <div className="max-w-[1400px] mx-auto h-[80px] px-4 md:px-8 flex items-center justify-between">
         
-        {/* Logo Image */}
-        <div className="cursor-pointer">
+        {/* Logo */}
+        <div
+          className="cursor-pointer"
+          onClick={() => scrollToSection("home")}
+        >
           <Image
             src="/logo.webp"
             alt="Accredian Logo"
             width={124}
             height={60}
-            className="object-contain"
+            className="object-contain w-[110px] md:w-[124px]"
             priority
           />
         </div>
 
-        {/* Nav Links */}
+        {/* Desktop Navbar */}
         <div className="hidden lg:flex items-center gap-9 font-bold">
           {navItems.map((item) => (
             <button
               key={item.id}
               onClick={() => scrollToSection(item.id)}
-              className={`relative text-[15px] font-medium transition duration-300   ${
+              className={`relative text-[15px] font-medium transition duration-300 ${
                 active === item.id
                   ? "text-blue-600"
                   : "text-black"
@@ -101,7 +107,38 @@ export default function Navbar() {
             </button>
           ))}
         </div>
+
+        {/* Phone Menu Hamburger */}
+        <button
+          className="lg:hidden"
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          {menuOpen ? (
+            <X size={28} />
+          ) : (
+            <Menu size={28} />
+          )}
+        </button>
       </div>
+
+      {/* Phone Dropdown */}
+      {menuOpen && (
+        <div className="lg:hidden bg-white border-t border-gray-200 shadow-md px-6 py-5 flex flex-col gap-4">
+          {navItems.map((item) => (
+            <button
+              key={item.id}
+              onClick={() => scrollToSection(item.id)}
+              className={`text-left font-medium ${
+                active === item.id
+                  ? "text-blue-600"
+                  : "text-black"
+              }`}
+            >
+              {item.name}
+            </button>
+          ))}
+        </div>
+      )}
     </nav>
   );
 }

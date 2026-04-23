@@ -29,8 +29,9 @@ export default function Home() {
       <FAQ />
       <Terminals />
       <ContactBanner />
-      <Footer />
       <Form />
+      <Footer />
+      
     </>
   );
 }
